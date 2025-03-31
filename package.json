@@ -1,0 +1,19 @@
+{
+  "name": "pnpm-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "cd frontend && parcel src/index.html",
+    "dev:tailwind": "cd frontend && npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "dev:backend": "cd backend && node server.js",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:tailwind\" \"npm run dev:backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.5",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
