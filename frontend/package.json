@@ -2,9 +2,8 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "pnpm run dev:frontend && pnpm run dev:tailwind",
+    "dev": "pnpm run dev:tailwind && pnpm run dev:frontend",
     "dev:frontend": "parcel src/index.html",
     "dev:tailwind": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
   },
